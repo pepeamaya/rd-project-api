@@ -18,10 +18,10 @@ npm install
 
 **Before run:** Set the *clientSecret* ID:
 ```
-    const credentials = {
-        clientId: '4a59a2fe9e2a47deb6c6b0ecadc3a769',
-        clientSecret: '',
-        redirectUri: 'http://localhost:3000/dashboard'
+const credentials = {
+    clientId: '4a59a2fe9e2a47deb6c6b0ecadc3a769',
+    clientSecret: '',
+    redirectUri: 'http://localhost:3000/dashboard'
 }
 ```
 
