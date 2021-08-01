@@ -4,8 +4,8 @@
   "description": "Simple server-side application that accesses user related data through the Spotify Web API",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "s": "nodemon index.js"
+    "s": "nodemon index.js",
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
