@@ -9,6 +9,11 @@ const credentials = {
     redirectUri: process.env.REDIRECT_URI
 }
 
+router.get('/', (req, res) => {
+    console.info('Ok');
+    res.sendStatus(200);
+});
+
 router.post('/login', (req, res) => {
     const code = req.body.code;
     const spotifyApi = new SpotifyWebApi(credentials);
@@ -23,9 +28,14 @@ router.post('/login', (req, res) => {
         })
     })
     .catch((e) => {
-        console.error(e);
         res.sendStatus(400);
+        throw new Error(`Trying to get auth code grand ${e}`);
     })
+});
+
+router.get('*', (req, res) => {
+    console.info('Not Found');
+    res.sendStatus(404);
 });
 
 module.exports = router;

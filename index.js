@@ -9,6 +9,6 @@ app.use(express.json());
 const spotifyWebRouter = require('./routes/spotify-web');
 app.use('/api', spotifyWebRouter);
 
-app.listen(3001, () => console.info('<=== Server ready ===>'));
+app.listen(3001, () => console.info('===> Server ready. Open http://localhost:3001/api'));
 
 module.exports = app;
