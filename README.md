@@ -16,16 +16,9 @@ git clone https://github.com/pepeamaya/rd-project-api.git
 npm install
 ```
 
-**Before run:** Set the *clientSecret* ID:
-```
-const credentials = {
-    clientId: '4a59a2fe9e2a47deb6c6b0ecadc3a769',
-    clientSecret: '',
-    redirectUri: 'http://localhost:3000/dashboard'
-}
-```
-
 ### How to run:
+**Before run:** Set the *CLIENT_SECRET* variable in .env file.
+
 ```bash
 npm start
 ```
