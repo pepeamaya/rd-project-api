@@ -37,7 +37,14 @@ router.delete('/logout', (req, res) => {
 });
 
 router.get('/albums', async (req, res) => {
-    const search = decodeURIComponent(req.query.search);
+    let search = null;
+    try {
+        search = decodeURIComponent(req.query.search);
+    } catch (err) {
+        return res.status(500).send({
+            message: err.message
+        });
+    }
     if (search) {
         try {
             // Search for an album
