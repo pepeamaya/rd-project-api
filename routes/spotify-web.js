@@ -26,8 +26,14 @@ router.post('/login', async (req, res) => {
 });
 
 router.delete('/logout', (req, res) => {
-    spotifyApi.resetAccessToken();
-    res.sendStatus(205); // session deleted return no content, refresh
+    if (spotifyApi.getAccessToken()) {
+        spotifyApi.resetAccessToken();
+        res.sendStatus(205); // session deleted return no content, refresh
+    } else {
+        return res.status(403).send({
+            message: 'Error: No token provided'
+        })
+    }
 });
 
 router.get('/albums', async (req, res) => {
