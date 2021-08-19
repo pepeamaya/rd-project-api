@@ -1,0 +1,12 @@
+POST http://localhost:3001/api/login
+
+###
+
+DELETE http://localhost:3001/api/logout
+
+###
+
+GET http://localhost:3001/api/albums
+
+###
+
